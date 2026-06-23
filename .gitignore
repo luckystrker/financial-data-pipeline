@@ -1,0 +1,16 @@
+.claude/
+.gemini/
+.kilo/
+.env
+server/.env
+.worktrees/
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.dbt/
+target/
+logs/

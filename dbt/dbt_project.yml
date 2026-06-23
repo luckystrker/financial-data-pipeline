@@ -1,0 +1,16 @@
+name: financial_pipeline
+version: 1.0.0
+config-version: 2
+
+profile: financial
+
+model-paths: ["models"]
+
+models:
+  financial_pipeline:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+      +engine: MergeTree()
+      +order_by: "(ticker, date)"

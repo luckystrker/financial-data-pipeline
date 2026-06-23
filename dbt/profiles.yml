@@ -1,0 +1,12 @@
+financial:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      schema: financial
+      user: default
+      password: "{{ env_var('CLICKHOUSE_PASSWORD', 'clickhouse') }}"
+      host: "{{ env_var('CLICKHOUSE_HOST', 'localhost') }}"
+      port: "{{ env_var('CLICKHOUSE_HTTP_PORT', '8123') | int }}"
+      driver: http
+      secure: false
